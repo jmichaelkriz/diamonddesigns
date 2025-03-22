@@ -145,8 +145,8 @@ li {
 .wrapper--nav {
   border-bottom: 1px solid var(--black);
   text-align: center;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
 }
 
 .wrapper--nav.border-off {
