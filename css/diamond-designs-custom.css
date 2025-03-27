@@ -151,7 +151,7 @@ li {
   padding-right: 1.5rem;
   font-size: 1.5rem;
   font-weight: 300;
-  display: inline-block;
+  display: none;
 }
 
 .button.in-footer.reverse {
@@ -303,7 +303,6 @@ li {
 
 .image--logo.in-footer {
   width: 16rem;
-  margin-bottom: 3rem;
 }
 
 .image--logo._404 {
@@ -402,6 +401,16 @@ li {
     grid-template-columns: 1fr;
     grid-auto-columns: 1fr;
     display: grid;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .button.in-footer {
+    display: inline-block;
+  }
+
+  .image--logo.in-footer {
+    margin-bottom: 3rem;
   }
 }
 
