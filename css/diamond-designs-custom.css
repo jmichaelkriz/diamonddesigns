@@ -89,12 +89,18 @@ li {
   position: relative;
 }
 
-.image--hero {
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  inset: 0%;
+.wrapper--hero.engagement {
+  background-image: url('../images/dd-OG.webp');
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.wrapper--hero.wedding-rings {
+  background-image: url('../images/custom-wedding-hero.webp');
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .container--hero {
@@ -152,18 +158,6 @@ li {
   font-size: 1.5rem;
   font-weight: 300;
   display: none;
-}
-
-.button.in-footer.reverse {
-  background-color: var(--white);
-  color: var(--black);
-  border: 1px solid #000;
-}
-
-.button.in-footer.reverse:hover {
-  border: 1px solid var(--white);
-  background-color: var(--brown);
-  color: var(--white);
 }
 
 .wrapper--nav {
@@ -421,8 +415,17 @@ li {
   }
 
   .wrapper--hero {
+    background-color: var(--black);
     padding-top: .5rem;
     padding-bottom: 4rem;
+  }
+
+  .wrapper--hero.engagement {
+    background-position: 65%;
+  }
+
+  .wrapper--hero.wedding-rings {
+    background-position: 55%;
   }
 
   .container--hero {
