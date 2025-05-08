@@ -1,9 +1,16 @@
 :root {
-  --light-grety: #d3d3d3;
+  --light-grey: #d3d3d3;
   --black: #303030;
   --white-85: #ffffffd9;
-  --brown: #3f281e;
   --white: #fff;
+  --brown: #3f281e;
+  --transparent: #fff0;
+}
+
+.w-layout-hflex {
+  flex-direction: row;
+  align-items: flex-start;
+  display: flex;
 }
 
 body {
@@ -49,7 +56,7 @@ a {
 }
 
 a:hover {
-  color: var(--light-grety);
+  color: var(--light-grey);
   text-decoration: none;
 }
 
@@ -84,16 +91,19 @@ li {
   justify-content: flex-start;
   align-items: center;
   width: 100%;
-  height: 100%;
   display: flex;
   position: relative;
 }
 
 .wrapper--hero.engagement {
-  background-image: url('../images/dd-OG.webp');
+  background-image: url('../images/custom-engagement-hero.webp');
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.wrapper--hero.engagement.short {
+  aspect-ratio: 4;
 }
 
 .wrapper--hero.wedding-rings {
@@ -118,20 +128,47 @@ li {
   box-shadow: 0 7px 9px 3px #30303080;
 }
 
+.container--hero.absolute {
+  box-shadow: none;
+  text-align: center;
+  background-color: #303030bf;
+  border-style: none none solid;
+  border-bottom-width: 1px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-height: none;
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+  inset: 0%;
+}
+
+.container--hero.absolute.color--white {
+  background-color: #303030d9;
+}
+
 .text--hero-bottom {
   margin-bottom: 2rem;
   font-size: 1.25rem;
 }
 
 .button {
+  border: .0625rem solid var(--black);
   background-color: var(--black);
+  border-radius: .5rem;
   padding: .75rem 1rem;
-  transition: box-shadow .2s, background-color .2s;
+  transition: box-shadow .4s, color .2s, border-color .2s, background-color .2s;
 }
 
 .button:hover {
-  background-color: var(--brown);
-  box-shadow: 0 2px 5px 0 var(--brown);
+  background-color: var(--white-85);
+  box-shadow: .5rem .5rem 0rem 0rem var(--black);
+  color: var(--black);
+}
+
+.button:active {
+  box-shadow: none;
 }
 
 .button.center {
@@ -158,6 +195,21 @@ li {
   font-size: 1.5rem;
   font-weight: 300;
   display: none;
+}
+
+.button.reverse {
+  background-color: var(--white);
+  color: var(--black);
+}
+
+.button.reverse:hover {
+  border-color: var(--white-85);
+  background-color: var(--black);
+  color: var(--white);
+}
+
+.button.border--grey {
+  border-color: var(--light-grey);
 }
 
 .wrapper--nav {
@@ -210,6 +262,14 @@ li {
 
 .wrapper--section.dark {
   background-color: var(--black);
+}
+
+.wrapper--section._80rem {
+  text-align: center;
+  width: 80rem;
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .image--grid {
@@ -366,9 +426,21 @@ li {
   margin-bottom: 8rem;
 }
 
+.container--buttons {
+  grid-column-gap: 2rem;
+  grid-row-gap: 2rem;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+}
+
 @media screen and (max-width: 991px) {
   .wrapper--hero {
     aspect-ratio: auto;
+  }
+
+  .wrapper--hero.engagement.short {
+    height: auto;
   }
 
   .container--hero {
@@ -376,6 +448,11 @@ li {
     margin-top: 1rem;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .container--hero.absolute.color--white {
+    margin-top: 0;
+    position: static;
   }
 
   .wrapper--section.grid {
@@ -399,6 +476,11 @@ li {
 }
 
 @media screen and (max-width: 767px) {
+  .wrapper--hero.engagement.short {
+    aspect-ratio: auto;
+    height: auto;
+  }
+
   .button.in-footer {
     display: inline-block;
   }
@@ -424,6 +506,11 @@ li {
     background-position: 65%;
   }
 
+  .wrapper--hero.engagement.short {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
   .wrapper--hero.wedding-rings {
     background-position: 55%;
   }
@@ -431,6 +518,11 @@ li {
   .container--hero {
     width: 96%;
     padding: .75rem 1rem;
+  }
+
+  .container--hero.absolute.color--white {
+    padding-top: 1.75rem;
+    padding-bottom: 1.75rem;
   }
 
   .button {
@@ -482,6 +574,9 @@ li {
   .grid--2col {
     grid-column-gap: 2rem;
     grid-row-gap: 2rem;
+    flex-flow: column;
+    justify-content: space-between;
+    align-items: center;
     padding-top: 2rem;
   }
 
@@ -489,6 +584,13 @@ li {
     max-width: 90%;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .container--buttons {
+    grid-column-gap: 1.5rem;
+    grid-row-gap: 1.5rem;
+    flex-flow: column;
+    display: flex;
   }
 }
 
@@ -532,12 +634,30 @@ li {
   grid-area: span 1 / span 1 / span 1 / span 1;
 }
 
-#w-node-_044a07ec-dc37-4d23-4227-e9d2b30a18fb-85aee131, #w-node-_044a07ec-dc37-4d23-4227-e9d2b30a18fc-85aee131, #w-node-_69d716c7-1ab0-97fc-9cb0-095cb542b844-85aee131 {
+#w-node-_044a07ec-dc37-4d23-4227-e9d2b30a18fb-85aee131, #w-node-_044a07ec-dc37-4d23-4227-e9d2b30a18fc-85aee131, #w-node-_69d716c7-1ab0-97fc-9cb0-095cb542b844-85aee131, #w-node-_69d716c7-1ab0-97fc-9cb0-095cb542b844-ef7b9bf1, #w-node-a8f27a1d-5f64-512b-15a5-226714ffeefc-ef7b9bf1 {
   align-self: center;
+}
+
+#w-node-a8f27a1d-5f64-512b-15a5-226714ffeefd-ef7b9bf1, #w-node-_952f68ae-9ddc-9b03-7f3b-4e08c0163fb0-ef7b9bf1 {
+  grid-area: span 1 / span 1 / span 1 / span 1;
+}
+
+#w-node-_952f68ae-9ddc-9b03-7f3b-4e08c0163faf-ef7b9bf1, #w-node-_32c29789-fffd-4475-1fff-894655a691fc-ef7b9bf1 {
+  align-self: center;
+}
+
+#w-node-_32c29789-fffd-4475-1fff-894655a691fd-ef7b9bf1 {
+  grid-area: span 1 / span 1 / span 1 / span 1;
 }
 
 @media screen and (max-width: 991px) {
   #w-node-a8f27a1d-5f64-512b-15a5-226714ffeef5-85aee131, #w-node-_044a07ec-dc37-4d23-4227-e9d2b30a18fb-85aee131 {
+    grid-area: 1 / 1 / 2 / 2;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  #w-node-_952f68ae-9ddc-9b03-7f3b-4e08c0163fa8-ef7b9bf1 {
     grid-area: 1 / 1 / 2 / 2;
   }
 }
