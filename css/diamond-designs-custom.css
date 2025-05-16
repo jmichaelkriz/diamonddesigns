@@ -54,6 +54,10 @@ h4 {
   font-weight: 400;
 }
 
+p {
+  margin-bottom: 1rem;
+}
+
 a {
   color: var(--white);
   text-decoration: underline;
@@ -114,6 +118,10 @@ li {
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.wrapper--hero.wedding-rings.short {
+  aspect-ratio: 4;
 }
 
 .container--hero {
@@ -265,6 +273,7 @@ li {
 
 .wrapper--section.dark {
   background-color: var(--black);
+  color: var(--white);
 }
 
 .wrapper--section._80rem {
@@ -275,9 +284,26 @@ li {
   margin-right: auto;
 }
 
+.wrapper--section._70rem {
+  text-align: center;
+  width: 70rem;
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .image--grid {
   object-fit: cover;
   width: 100%;
+}
+
+.image--grid.sticky {
+  position: sticky;
+  top: 1rem;
+}
+
+.container--block {
+  position: relative;
 }
 
 .container--block.centered {
@@ -409,6 +435,10 @@ li {
   position: relative;
 }
 
+.grid--2col._1-3 {
+  grid-template-columns: 1.5fr 1fr;
+}
+
 .wrapper--utility {
   justify-content: center;
   align-items: center;
@@ -473,7 +503,7 @@ li {
 
 .h3--subhead {
   text-align: left;
-  margin-bottom: .5rem;
+  margin-bottom: 1rem;
 }
 
 .grid--4col {
@@ -735,7 +765,7 @@ li {
   grid-area: span 1 / span 1 / span 1 / span 1;
 }
 
-#w-node-_69d716c7-1ab0-97fc-9cb0-095cb542b844-11322a1c, #w-node-_21dd9d46-4445-49d3-29b6-10fca2df6caa-85aee131, #w-node-_21dd9d46-4445-49d3-29b6-10fca2df6cab-85aee131 {
+#w-node-_69d716c7-1ab0-97fc-9cb0-095cb542b844-11322a1c, #w-node-_1250d899-dab9-6aa8-250e-0a3466d0943e-85aee131, #w-node-_21dd9d46-4445-49d3-29b6-10fca2df6cab-85aee131 {
   align-self: center;
 }
 
@@ -743,7 +773,7 @@ li {
   grid-area: span 1 / span 1 / span 1 / span 1;
 }
 
-#w-node-a8f27a1d-5f64-512b-15a5-226714ffeef5-85aee131, #w-node-a8f27a1d-5f64-512b-15a5-226714ffeefc-85aee131, #w-node-bbc75b97-8d7f-9ba5-4442-3aa32affa7e2-85aee131, #w-node-bbc75b97-8d7f-9ba5-4442-3aa32affa7e3-85aee131 {
+#w-node-a8f27a1d-5f64-512b-15a5-226714ffeefc-85aee131, #w-node-bbc75b97-8d7f-9ba5-4442-3aa32affa7e3-85aee131 {
   align-self: center;
 }
 
@@ -751,7 +781,7 @@ li {
   grid-area: span 1 / span 1 / span 1 / span 1;
 }
 
-#w-node-_044a07ec-dc37-4d23-4227-e9d2b30a18fb-85aee131, #w-node-_044a07ec-dc37-4d23-4227-e9d2b30a18fc-85aee131, #w-node-_69d716c7-1ab0-97fc-9cb0-095cb542b844-85aee131, #w-node-_69d716c7-1ab0-97fc-9cb0-095cb542b844-ef7b9bf1, #w-node-a8f27a1d-5f64-512b-15a5-226714ffeefc-ef7b9bf1 {
+#w-node-_044a07ec-dc37-4d23-4227-e9d2b30a18fc-85aee131, #w-node-_69d716c7-1ab0-97fc-9cb0-095cb542b844-ef7b9bf1, #w-node-a8f27a1d-5f64-512b-15a5-226714ffeefc-ef7b9bf1 {
   align-self: center;
 }
 
@@ -767,12 +797,28 @@ li {
   grid-area: span 1 / span 2 / span 1 / span 2;
 }
 
-#w-node-_32c29789-fffd-4475-1fff-894655a691fc-ef7b9bf1 {
+#w-node-_32c29789-fffd-4475-1fff-894655a691fc-ef7b9bf1, #w-node-_21dd9d46-4445-49d3-29b6-10fca2df6caa-07e40940, #w-node-_21dd9d46-4445-49d3-29b6-10fca2df6cab-07e40940 {
+  align-self: center;
+}
+
+#w-node-_21dd9d46-4445-49d3-29b6-10fca2df6cac-07e40940, #w-node-a8f27a1d-5f64-512b-15a5-226714ffeefd-07e40940 {
+  grid-area: span 1 / span 1 / span 1 / span 1;
+}
+
+#w-node-a8f27a1d-5f64-512b-15a5-226714ffeef5-07e40940, #w-node-a8f27a1d-5f64-512b-15a5-226714ffeefc-07e40940, #w-node-bbc75b97-8d7f-9ba5-4442-3aa32affa7e2-07e40940, #w-node-bbc75b97-8d7f-9ba5-4442-3aa32affa7e3-07e40940 {
+  align-self: center;
+}
+
+#w-node-bbc75b97-8d7f-9ba5-4442-3aa32affa7e4-07e40940, #w-node-_044a07ec-dc37-4d23-4227-e9d2b30a18df-07e40940 {
+  grid-area: span 1 / span 1 / span 1 / span 1;
+}
+
+#w-node-_044a07ec-dc37-4d23-4227-e9d2b30a18fb-07e40940, #w-node-_044a07ec-dc37-4d23-4227-e9d2b30a18fc-07e40940, #w-node-_69d716c7-1ab0-97fc-9cb0-095cb542b844-07e40940 {
   align-self: center;
 }
 
 @media screen and (max-width: 991px) {
-  #w-node-a8f27a1d-5f64-512b-15a5-226714ffeef5-85aee131, #w-node-_044a07ec-dc37-4d23-4227-e9d2b30a18fb-85aee131 {
+  #w-node-a8f27a1d-5f64-512b-15a5-226714ffeef5-85aee131, #w-node-_044a07ec-dc37-4d23-4227-e9d2b30a18fb-85aee131, #w-node-a8f27a1d-5f64-512b-15a5-226714ffeef5-07e40940, #w-node-_044a07ec-dc37-4d23-4227-e9d2b30a18fb-07e40940 {
     grid-area: 1 / 1 / 2 / 2;
   }
 }
