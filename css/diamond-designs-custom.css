@@ -1,7 +1,7 @@
 :root {
+  --black: #303030;
   --white: #fff;
   --light-grey: #d3d3d3;
-  --black: #303030;
   --white-85: #ffffffd9;
   --brown: #3f281e;
   --transparent: #fff0;
@@ -36,6 +36,7 @@ h2 {
 }
 
 h3 {
+  color: var(--black);
   text-align: center;
   text-transform: capitalize;
   margin-top: 0;
@@ -273,7 +274,6 @@ li {
 
 .wrapper--section.dark {
   background-color: var(--black);
-  color: var(--white);
 }
 
 .wrapper--section._80rem {
@@ -504,6 +504,7 @@ li {
 .h3--subhead {
   text-align: left;
   margin-bottom: 1rem;
+  font-weight: 800;
 }
 
 .grid--4col {
