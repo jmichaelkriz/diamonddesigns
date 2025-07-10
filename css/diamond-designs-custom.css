@@ -892,6 +892,10 @@ li {
     position: static;
   }
 
+  .button.in-nav {
+    margin-left: 0;
+  }
+
   .wrapper--section.grid {
     flex-flow: column;
     grid-template-columns: 1fr;
@@ -967,14 +971,25 @@ li {
     padding-bottom: 2rem;
   }
 
+  .container--menu {
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+  }
+
   .nav--link {
     text-align: center;
     margin-bottom: 1rem;
+    margin-right: 0;
   }
 
   .menu-animation {
     position: absolute;
     inset: 0%;
+  }
+
+  .menu--button {
+    padding: 1rem;
   }
 
   .menu--button.w--open {
@@ -989,7 +1004,15 @@ li {
   }
 
   .button.in-footer {
+    margin-bottom: 2rem;
     display: inline-block;
+  }
+
+  .wrapper--footer {
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    display: flex;
   }
 
   .image--logo.in-footer {
