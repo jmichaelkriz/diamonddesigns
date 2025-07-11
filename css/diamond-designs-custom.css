@@ -1027,6 +1027,12 @@ li {
     margin-bottom: 2rem;
   }
 
+  .wrapper--menu {
+    background-color: var(--white);
+    position: sticky;
+    top: 0;
+  }
+
   .container--menu {
     text-align: center;
     justify-content: center;
