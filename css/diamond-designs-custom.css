@@ -13,12 +13,6 @@
   display: flex;
 }
 
-.w-layout-vflex {
-  flex-direction: column;
-  align-items: flex-start;
-  display: flex;
-}
-
 .w-layout-grid {
   grid-row-gap: 16px;
   grid-column-gap: 16px;
@@ -26,6 +20,12 @@
   grid-template-columns: 1fr 1fr;
   grid-auto-columns: 1fr;
   display: grid;
+}
+
+.w-layout-vflex {
+  flex-direction: column;
+  align-items: flex-start;
+  display: flex;
 }
 
 body {
@@ -58,7 +58,6 @@ h3 {
   margin-bottom: 2rem;
   font-size: 1.5rem;
   font-weight: 400;
-  line-height: 1.6;
 }
 
 h4 {
@@ -127,7 +126,7 @@ li {
 
 .wrapper--hero.engagement.short {
   aspect-ratio: 2.39;
-  background-image: linear-gradient(#303030bf, #303030bf), url('../images/custom-engagement-hero.webp');
+  background-image: linear-gradient(#303030bf, #303030bf), url('../images/dd-OG.webp');
   background-position: 0 0, 50%;
   background-repeat: repeat, no-repeat;
   background-size: auto, cover;
@@ -434,6 +433,11 @@ li {
   font-size: 1rem;
 }
 
+.text--body-bottom.med {
+  margin-bottom: 1rem;
+  font-size: 1.125rem;
+}
+
 .container--cta {
   text-align: center;
   width: 80rem;
@@ -601,6 +605,14 @@ li {
 
 .container--metal.rose-gold {
   border: .5rem solid #f8cfb4;
+}
+
+.container--metal.palladium {
+  border: .5rem solid var(--white-85);
+}
+
+.container--metal.tungsten {
+  border: .5rem solid #535353;
 }
 
 .sublist {
@@ -871,6 +883,42 @@ li {
   color: #30303080;
 }
 
+.nav--link.button {
+  color: var(--white);
+  margin-left: 1rem;
+  transition: box-shadow .4s, border-color .2s, background-color .2s, color .2s;
+}
+
+.nav--link.button:hover {
+  color: var(--black);
+}
+
+.wrapper--hero-engagement {
+  aspect-ratio: 2.39;
+  background-image: linear-gradient(#303030bf, #303030bf), url('../images/dd-OG.webp');
+  background-position: 0 0, 50%;
+  background-repeat: repeat, no-repeat;
+  background-size: auto, cover;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  display: flex;
+  position: relative;
+}
+
+.wrapper--hero-wedding {
+  aspect-ratio: 2.39;
+  background-image: linear-gradient(#303030bf, #303030bf), url('../images/custom-wedding-hero.webp');
+  background-position: 0 0, 50%;
+  background-repeat: repeat, no-repeat;
+  background-size: auto, cover;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  display: flex;
+  position: relative;
+}
+
 @media screen and (max-width: 991px) {
   .wrapper--hero {
     aspect-ratio: auto;
@@ -983,6 +1031,11 @@ li {
     margin-right: 0;
   }
 
+  .nav--link.button {
+    margin-left: 0;
+    display: inline-flex;
+  }
+
   .menu-animation {
     position: absolute;
     inset: 0%;
@@ -994,6 +1047,11 @@ li {
 
   .menu--button.w--open {
     background-color: var(--transparent);
+  }
+
+  .wrapper--hero-engagement, .wrapper--hero-wedding {
+    aspect-ratio: auto;
+    height: auto;
   }
 }
 
@@ -1044,6 +1102,11 @@ li {
     margin-right: 4%;
     position: absolute;
     inset: 0% 0% 0% auto;
+  }
+
+  .wrapper--hero-engagement, .wrapper--hero-wedding {
+    aspect-ratio: auto;
+    height: auto;
   }
 }
 
@@ -1234,6 +1297,13 @@ li {
   .h1--goudy {
     font-size: 2rem;
   }
+
+  .wrapper--hero-engagement, .wrapper--hero-wedding {
+    background-color: var(--black);
+    background-position: 65%;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
 }
 
 #w-node-a8f27a1d-5f64-512b-15a5-226714ffeefc-11322a1c {
@@ -1260,23 +1330,19 @@ li {
   grid-area: span 1 / span 1 / span 1 / span 1;
 }
 
-#w-node-_69d716c7-1ab0-97fc-9cb0-095cb542b844-11322a1c, #w-node-_1250d899-dab9-6aa8-250e-0a3466d0943e-85aee131, #w-node-_21dd9d46-4445-49d3-29b6-10fca2df6cab-85aee131 {
+#w-node-_69d716c7-1ab0-97fc-9cb0-095cb542b844-11322a1c, #w-node-_1250d899-dab9-6aa8-250e-0a3466d0943e-85aee131 {
   align-self: center;
 }
 
-#w-node-_21dd9d46-4445-49d3-29b6-10fca2df6cac-85aee131, #w-node-a8f27a1d-5f64-512b-15a5-226714ffeefd-85aee131 {
-  grid-area: span 1 / span 1 / span 1 / span 1;
+#w-node-ed202ffa-c3b9-b1ab-7698-ab115c2eaad4-85aee131 {
+  justify-self: start;
 }
 
-#w-node-a8f27a1d-5f64-512b-15a5-226714ffeefc-85aee131, #w-node-bbc75b97-8d7f-9ba5-4442-3aa32affa7e3-85aee131 {
-  align-self: center;
+#w-node-_7af0429f-8a58-9988-15d9-c1b0320076d5-85aee131 {
+  grid-area: span 1 / span 2 / span 1 / span 2;
 }
 
-#w-node-bbc75b97-8d7f-9ba5-4442-3aa32affa7e4-85aee131, #w-node-_044a07ec-dc37-4d23-4227-e9d2b30a18df-85aee131 {
-  grid-area: span 1 / span 1 / span 1 / span 1;
-}
-
-#w-node-_044a07ec-dc37-4d23-4227-e9d2b30a18fc-85aee131, #w-node-_69d716c7-1ab0-97fc-9cb0-095cb542b844-ef7b9bf1, #w-node-a8f27a1d-5f64-512b-15a5-226714ffeef5-ef7b9bf1, #w-node-a8f27a1d-5f64-512b-15a5-226714ffeefc-ef7b9bf1 {
+#w-node-_69d716c7-1ab0-97fc-9cb0-095cb542b844-ef7b9bf1, #w-node-a8f27a1d-5f64-512b-15a5-226714ffeef5-ef7b9bf1, #w-node-a8f27a1d-5f64-512b-15a5-226714ffeefc-ef7b9bf1 {
   align-self: center;
 }
 
@@ -1338,8 +1404,28 @@ li {
   grid-area: span 1 / span 2 / span 1 / span 2;
 }
 
+#w-node-_1250d899-dab9-6aa8-250e-0a3466d0943e-e1faa138, #w-node-_21dd9d46-4445-49d3-29b6-10fca2df6cab-e1faa138 {
+  align-self: center;
+}
+
+#w-node-_21dd9d46-4445-49d3-29b6-10fca2df6cac-e1faa138, #w-node-a8f27a1d-5f64-512b-15a5-226714ffeefd-e1faa138 {
+  grid-area: span 1 / span 1 / span 1 / span 1;
+}
+
+#w-node-a8f27a1d-5f64-512b-15a5-226714ffeefc-e1faa138, #w-node-bbc75b97-8d7f-9ba5-4442-3aa32affa7e3-e1faa138 {
+  align-self: center;
+}
+
+#w-node-bbc75b97-8d7f-9ba5-4442-3aa32affa7e4-e1faa138, #w-node-_044a07ec-dc37-4d23-4227-e9d2b30a18df-e1faa138 {
+  grid-area: span 1 / span 1 / span 1 / span 1;
+}
+
+#w-node-_044a07ec-dc37-4d23-4227-e9d2b30a18fc-e1faa138 {
+  align-self: center;
+}
+
 @media screen and (max-width: 991px) {
-  #w-node-a8f27a1d-5f64-512b-15a5-226714ffeef5-85aee131, #w-node-_044a07ec-dc37-4d23-4227-e9d2b30a18fb-85aee131, #w-node-a8f27a1d-5f64-512b-15a5-226714ffeef5-07e40940, #w-node-_044a07ec-dc37-4d23-4227-e9d2b30a18fb-07e40940 {
+  #w-node-a8f27a1d-5f64-512b-15a5-226714ffeef5-07e40940, #w-node-_044a07ec-dc37-4d23-4227-e9d2b30a18fb-07e40940, #w-node-a8f27a1d-5f64-512b-15a5-226714ffeef5-e1faa138, #w-node-_044a07ec-dc37-4d23-4227-e9d2b30a18fb-e1faa138 {
     grid-area: 1 / 1 / 2 / 2;
   }
 }
